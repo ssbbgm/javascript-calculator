@@ -14,7 +14,7 @@ class Calculator {
     }
 
     delete(){
-
+        this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
     appendNumber(number){
@@ -96,15 +96,15 @@ operationButtons.forEach(button => {
 
 equalsButton.addEventListener('click', button => {
     calculator.compute()
-    updateDisplay()
+    calculator.updateDisplay()
 })
 
 allClearButton.addEventListener('click', button => {
     calculator.clear()
-    updateDisplay()
+    calculator.updateDisplay()
 })
 
 deleteButton.addEventListener('click', button => {
     calculator.delete()
-    updateDisplay()
+    calculator.updateDisplay()
 })
