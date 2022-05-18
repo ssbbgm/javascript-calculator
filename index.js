@@ -47,12 +47,11 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 
 
 
-const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
+let calculator = new Calculator (previousOperandTextElement, currentOperandTextElement);
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()
-        console.log(number)
     })
 })
